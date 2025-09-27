@@ -27,17 +27,11 @@ User Query → Orchestrator Agent → [Math Agent | Weather Agent | ...] → Coo
 #### 1. The BaseAgent:
 
 - Features:
-
   - **LLM Initialization**: Supports both OpenAI (GPT) and Google (Gemini) models
   - **Memory Management**: Uses LangGraph's `MemorySaver` for conversation persistence
   - **Async Lifecycle**: Handles async initialization with `_ensure_initialized()`
   - **Tool Integration**: Abstract methods for tool and prompt definition
   - **Response Processing**: Standardized response handling pipeline
-
-- Key methods:
-  - `_initialize_agent()`: Sets up the LangGraph agent with tools and prompts
-  - `invoke_agent()`: Main entry point for processing user input
-  - `get_tools()`, `get_prompt()`, `get_response_format()`: Agent-specific implementations
 
 #### 2. BaseAgentExecutor:
 
@@ -98,13 +92,7 @@ User Query → Orchestrator Agent → [Math Agent | Weather Agent | ...] → Coo
 
 The orchestrator communicates with other agents via HTTP using the A2A protocol:
 
-```python
-class RemoteAgentConnection:
-    """Manages HTTP connections to remote agents"""
-```
-
 Communication flow:
-
 1. **Discovery**: `create_from_url()` fetches agent card from `/agent-card` endpoint
 2. **Connection**: Establishes persistent HTTP client with 600-second timeout
 3. **Message Sending**: `send_message()` sends A2A-formatted requests
@@ -247,7 +235,7 @@ tasks = [
 ## Directory Structure
 
 ```
-A2A/
+A2A-Orchestrator/
 ├── a2a_server/                               # Core package
 │   ├── agent_cards/                          # Agent configuration
 │   │   ├── math_agent_card.json
@@ -535,6 +523,7 @@ This project also makes use of other open-source libraries (e.g., LangGraph, MCP
 - [MCP](https://github.com/modelcontextprotocol) – For providing the Model Context Protocol that inspired part of the system design.
 - [A2A](https://github.com/a2a-project) – For concepts and architecture patterns used in building orchestrators and agents.
 - [LangGraph](https://github.com/langchain-ai/langgraph) – For enabling composable agent workflows and structured orchestration.
+
 
 
 
