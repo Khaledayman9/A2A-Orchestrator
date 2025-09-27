@@ -6,6 +6,7 @@
 A distributed multi-agent system that orchestrates complex tasks across specialized AI agents using A2A (Agent-to-Agent) protocol, MCP (Model Context Protocol) and LangGraph.
 
 ## Architecture Overview
+![A2A Orchestrator Diagram](https://github.com/user-attachments/assets/ceed8545-1b5a-42d1-bc1e-21fbf3cac288)
 
 ```
 User Query → Orchestrator Agent → [Math Agent | Weather Agent | ...] → Coordinated Response
@@ -525,3 +526,4 @@ This project also makes use of other open-source libraries (e.g., LangGraph, MCP
 - [MCP](https://github.com/modelcontextprotocol) – For providing the Model Context Protocol that inspired part of the system design.
 - [A2A](https://github.com/a2a-project) – For concepts and architecture patterns used in building orchestrators and agents.
 - [LangGraph](https://github.com/langchain-ai/langgraph) – For enabling composable agent workflows and structured orchestration.
+
