@@ -299,7 +299,7 @@ A2A/
 
    ```bash
    git clone <repository-url>
-   cd A2A-
+   cd A2A-Orchestrator
    ```
 
 2. **Set up environment variables:**
@@ -526,4 +526,5 @@ This project also makes use of other open-source libraries (e.g., LangGraph, MCP
 - [MCP](https://github.com/modelcontextprotocol) – For providing the Model Context Protocol that inspired part of the system design.
 - [A2A](https://github.com/a2a-project) – For concepts and architecture patterns used in building orchestrators and agents.
 - [LangGraph](https://github.com/langchain-ai/langgraph) – For enabling composable agent workflows and structured orchestration.
+
 
