@@ -476,15 +476,12 @@ Weather agent uses MCP for external tool integration:
 ### Common Issues
 
 1. **Port conflicts**: Check if ports 10003-10005 are available
-2. **API keys**: Ensure OpenAI/Google API keys are properly configured
-3. **Dependencies**: Run `uv sync` or `pip install -r requirements.txt`
-4. **MCP server**: Ensure weather MCP server starts correctly
-5. **Rate Limiting Issues**: Shared API Key Problem
+2. **Rate Limiting Issues**: Shared API Key Problem
    - **Issue**: All agents use the same OpenAI API key configured in `settings.py`
    - **Impact**: High request volume can trigger 429 "Too Many Requests" errors
-6. **Parallel Execution Amplification**: Orchestrator's parallel task execution can send multiple simultaneous requests. Multiplies rate limit pressure during complex queries.
-7. **No Streaming Support**: Current implementation lacks real-time streaming
-8. **Memory Management**: Uses in-memory storage only
+3. **Parallel Execution Amplification**: Orchestrator's parallel task execution can send multiple simultaneous requests. Multiplies rate limit pressure during complex queries.
+4. **No Streaming Support**: Current implementation lacks real-time streaming
+5. **Memory Management**: Uses in-memory storage only
 
 ### Debugging
 
@@ -526,5 +523,6 @@ This project also makes use of other open-source libraries (e.g., LangGraph, MCP
 - [MCP](https://github.com/modelcontextprotocol) – For providing the Model Context Protocol that inspired part of the system design.
 - [A2A](https://github.com/a2a-project) – For concepts and architecture patterns used in building orchestrators and agents.
 - [LangGraph](https://github.com/langchain-ai/langgraph) – For enabling composable agent workflows and structured orchestration.
+
 
 
