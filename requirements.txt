@@ -1,0 +1,26 @@
+# Core A2A / MCP / LangChain stack
+a2a-sdk[sql]  
+fastmcp              
+google-adk
+google-generativeai
+google-cloud-aiplatform
+langchain-mcp-adapters
+langchain         
+langgraph             
+langchain-community
+langchain-openai
+langchain-google-genai
+mcp[cli]
+
+# Web / utilities
+uvicorn
+fastapi
+httpx
+requests
+python-dotenv
+networkx
+numpy
+pandas
+pydantic
+nest-asyncio
+logging

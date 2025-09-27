@@ -1,0 +1,31 @@
+[project]
+name = "a2a-orchestrator"
+version = "0.1.0"
+description = "A distributed multi-agent system that orchestrates complex tasks across specialized AI agents using A2A (Agent-to-Agent) protocol, MCP (Model Context Protocol) and LangGraph."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "a2a-sdk[sql]>=0.3.7",
+    "fastapi>=0.117.1",
+    "fastmcp>=2.12.3",
+    "google-adk>=1.15.0",
+    "google-cloud-aiplatform>=1.115.0",
+    "google-generativeai>=0.8.5",
+    "httpx>=0.28.1",
+    "langchain>=0.3.27",
+    "langchain-community>=0.3.30",
+    "langchain-google-genai>=2.0.10",
+    "langchain-mcp-adapters>=0.1.10",
+    "langchain-openai>=0.3.33",
+    "langgraph>=0.6.7",
+    "logging>=0.4.9.6",
+    "mcp[cli]>=1.15.0",
+    "nest-asyncio>=1.6.0",
+    "networkx>=3.4.2",
+    "numpy>=2.2.6",
+    "pandas>=2.3.2",
+    "pydantic>=2.11.9",
+    "python-dotenv>=1.1.1",
+    "requests>=2.32.5",
+    "uvicorn>=0.37.0",
+]
