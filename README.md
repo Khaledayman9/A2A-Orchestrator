@@ -215,35 +215,35 @@ tasks = [
 
 #### Examples
 
-##### Case 1: Testing a single agent  
-- **Input:**  
-```text
-What is 5 + 7?
-```
-- **Result:**  
-```text
-Result: context_id=None extensions=None kind='message' message_id='6a628346-4caa-4f2e-be2b-ac75dfc7f01b' metadata=None parts=[Part(root=TextPart(kind='text', metadata=None, text='Execution Summary: A single math calculation task to compute the sum of 5 and 7.\n\nTask 1 (Math Agent): 5 + 7 = 12\n'))] reference_task_ids=None role=<Role.agent: 'agent'> task_id=None
-```
+- Case 1: Testing a single agent  
+  - **Input:**  
+  ```text
+  What is 5 + 7?
+  ```
+  - **Result:**  
+  ```text
+  Result: context_id=None extensions=None kind='message' message_id='6a628346-4caa-4f2e-be2b-ac75dfc7f01b' metadata=None parts=[Part(root=TextPart(kind='text', metadata=None, text='Execution Summary: A single math calculation task to compute the sum of 5 and 7.\n\nTask 1 (Math Agent): 5 + 7 = 12\n'))] reference_task_ids=None role=<Role.agent: 'agent'> task_id=None
+  ```
 
-##### Case 2: Testing multiple agents with concurrent tasks
-- **Input:**
-```text
-Calculate 3 * 4 and tell me the weather in New York
-```
-- **Result:**
-```text
-context_id=None extensions=None kind='message' message_id='d59c464a-b0e7-4ef2-9a2b-394a518c7bec' metadata=None parts=[Part(root=TextPart(kind='text', metadata=None, text='Execution Summary: First, calculate 3 * 4 using the Math Agent. Second, get the current weather in New York using the Weather Agent. Both tasks are independent and can be executed in parallel.\n\nTask 1 (Math Agent): 3 * 4 = 12\nTask 2 (Weather Agent): It seems there was an issue retrieving the weather for New York. Could you please try again later?\n'))] reference_task_ids=None role=<Role.agent: 'agent'> task_id=None
-```
+- Case 2: Testing multiple agents with concurrent tasks
+  - **Input:**
+  ```text
+  Calculate 3 * 4 and tell me the weather in New York
+  ```
+  - **Result:**
+  ```text
+  context_id=None extensions=None kind='message' message_id='d59c464a-b0e7-4ef2-9a2b-394a518c7bec' metadata=None parts=[Part(root=TextPart(kind='text', metadata=None, text='Execution Summary: First, calculate 3 * 4 using the Math Agent. Second, get the current weather in New York using the Weather Agent. Both tasks are independent and can be executed in parallel.\n\nTask 1 (Math Agent): 3 * 4 = 12\nTask 2 (Weather Agent): It seems there was an issue retrieving the weather for New York. Could you please try again later?\n'))] reference_task_ids=None role=<Role.agent: 'agent'> task_id=None
+  ```
 
-##### Case 3: Testing multiple agents with sequential (dependent) tasks
-- **Input:**
-```text
-First calculate 3 × 4. Then, using that result as the day number of this month, tell me the weather in Cairo on that day.
-```
-- **Result:**
-```text
-Result: context_id=None extensions=None kind='message' message_id='406de694-0deb-45be-a360-6f22345e0219' metadata=None parts=[Part(root=TextPart(kind='text', metadata=None, text='Execution Summary: First, calculate 3 × 4 to get 12. Then, get the weather in Cairo on the 12th day of this month.\n\nTask 1 (Math Agent): 3 × 4 = 12\nTask 2 (Weather Agent): The weather forecast for Cairo on the 12th day of this month is currently unavailable. Please try again later or provide additional details for assistance.\n'))] reference_task_ids=None role=<Role.agent: 'agent'> task_id=None
-```
+- Case 3: Testing multiple agents with sequential (dependent) tasks
+  - **Input:**
+  ```text
+  First calculate 3 × 4. Then, using that result as the day number of this month, tell me the weather in Cairo on that day.
+  ```
+  - **Result:**
+  ```text
+  Result: context_id=None extensions=None kind='message' message_id='406de694-0deb-45be-a360-6f22345e0219' metadata=None parts=[Part(root=TextPart(kind='text', metadata=None, text='Execution Summary: First, calculate 3 × 4 to get 12. Then, get the weather in Cairo on the 12th day of this month.\n\nTask 1 (Math Agent): 3 × 4 = 12\nTask 2 (Weather Agent): The weather forecast for Cairo on the 12th day of this month is currently unavailable. Please try again later or provide additional details for assistance.\n'))] reference_task_ids=None role=<Role.agent: 'agent'> task_id=None
+  ```
 
 ## Directory Structure
 
@@ -555,6 +555,7 @@ This project also makes use of other open-source libraries (e.g., LangGraph, MCP
 - [MCP](https://github.com/modelcontextprotocol) – For providing the Model Context Protocol that inspired part of the system design.
 - [A2A](https://github.com/a2a-project) – For concepts and architecture patterns used in building orchestrators and agents.
 - [LangGraph](https://github.com/langchain-ai/langgraph) – For enabling composable agent workflows and structured orchestration.
+
 
 
 
