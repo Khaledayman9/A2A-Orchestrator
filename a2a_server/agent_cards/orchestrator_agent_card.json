@@ -1,0 +1,36 @@
+{
+  "name": "Orchestrator Agent",
+  "description": "An intelligent orchestrator that plans and coordinates execution across multiple specialized agents",
+  "url": "http://localhost:10003/",
+  "version": "1.0.0",
+  "defaultInputModes": ["text"],
+  "defaultOutputModes": ["text"],
+  "capabilities": {
+    "streaming": true,
+    "multimodal": false,
+    "contextRetention": true
+  },
+  "skills": [
+    {
+      "id": "plan",
+      "name": "Task Planning",
+      "description": "Break down complex requests into executable tasks",
+      "tags": ["planning", "orchestration", "coordination"],
+      "examples": [
+        "Plan a multi-step calculation",
+        "Coordinate weather and math queries"
+      ]
+    },
+    {
+      "id": "route",
+      "name": "Agent Routing",
+      "description": "Route tasks to appropriate specialized agents",
+      "tags": ["routing", "delegation"],
+      "examples": [
+        "Send math problems to Math Agent",
+        "Send weather queries to Weather Agent"
+      ]
+    }
+  ],
+  "supportsAuthenticatedExtendedCard": true
+}

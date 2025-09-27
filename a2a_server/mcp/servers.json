@@ -1,0 +1,12 @@
+{
+  "Weather": {
+    "command": "python",
+    "args": ["-m", "a2a_server.mcp.servers.weather"],
+    "transport": "stdio"
+  },
+  "Weather (UV)": {
+    "command": "uv",
+    "args": ["run", "python", "-m", "a2a_server.mcp.servers.weather"],
+    "transport": "stdio"
+  }
+}

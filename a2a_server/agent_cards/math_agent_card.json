@@ -1,0 +1,65 @@
+{
+  "name": "Math Agent",
+  "description": "A math expert agent that solves arithmetic and power problems using predefined tools.",
+  "url": "http://localhost:10004/",
+  "version": "1.0.0",
+  "defaultInputModes": ["text"],
+  "defaultOutputModes": ["text"],
+  "capabilities": {
+    "streaming": true,
+    "multimodal": false,
+    "contextRetention": true
+  },
+  "skills": [
+    {
+      "id": "add",
+      "name": "Addition",
+      "description": "Add two numbers together",
+      "tags": ["math", "arithmetic", "addition"],
+      "examples": ["5 + 7", "add 10 and 20"]
+    },
+    {
+      "id": "subtract",
+      "name": "Subtraction",
+      "description": "Subtract one number from another",
+      "tags": ["math", "arithmetic", "subtraction"],
+      "examples": ["10 - 3", "subtract 100 from 250"]
+    },
+    {
+      "id": "multiply",
+      "name": "Multiplication",
+      "description": "Multiply two numbers together",
+      "tags": ["math", "arithmetic", "multiplication"],
+      "examples": ["7 * 8", "multiply 12 and 4"]
+    },
+    {
+      "id": "divide",
+      "name": "Division",
+      "description": "Divide one number by another",
+      "tags": ["math", "arithmetic", "division"],
+      "examples": ["20 / 5", "divide 144 by 12"]
+    },
+    {
+      "id": "square",
+      "name": "Square",
+      "description": "Square a number (multiply it by itself)",
+      "tags": ["math", "power", "square"],
+      "examples": ["square 9", "9²"]
+    },
+    {
+      "id": "cube",
+      "name": "Cube",
+      "description": "Cube a number (multiply it by itself twice)",
+      "tags": ["math", "power", "cube"],
+      "examples": ["cube 3", "3³"]
+    },
+    {
+      "id": "power",
+      "name": "Exponentiation",
+      "description": "Raise a number to the power of another number",
+      "tags": ["math", "power", "exponent"],
+      "examples": ["2^10", "raise 5 to the power of 4"]
+    }
+  ],
+  "supportsAuthenticatedExtendedCard": true
+}

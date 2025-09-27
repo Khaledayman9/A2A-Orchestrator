@@ -1,0 +1,26 @@
+{
+  "name": "Weather Agent",
+  "description": "An intelligent assistant that retrieves weather information via MCP tools.",
+  "url": "http://localhost:10005/",
+  "version": "1.0.0",
+  "defaultInputModes": ["text"],
+  "defaultOutputModes": ["text"],
+  "capabilities": {
+    "streaming": true,
+    "multimodal": false,
+    "contextRetention": true
+  },
+  "skills": [
+    {
+      "id": "get_weather",
+      "name": "Get Weather",
+      "description": "Retrieve the current weather for a specific location.",
+      "tags": ["weather", "forecast", "temperature"],
+      "examples": [
+        "What is the weather in New York?",
+        "Tell me the forecast for Cairo"
+      ]
+    }
+  ],
+  "supportsAuthenticatedExtendedCard": true
+}
