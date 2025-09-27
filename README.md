@@ -214,7 +214,6 @@ tasks = [
 ```
 
 #### Examples
-
 - Case 1: Testing a single agent  
   - **Input:**  
   ```text
@@ -298,25 +297,6 @@ A2A/
 - **Plugin System**: Easy to add new specialized agents
 - **MCP Integration**: Supports Model Context Protocol for external tool integration
 - **Agent Cards**: JSON-based agent capability descriptions
-
-## Example Queries
-
-### Simple Queries
-
-```
-"What is 5 + 7?"                    → Math Agent
-"What's the weather in Cairo?"      → Weather Agent
-```
-
-### Complex Orchestrated Queries
-
-```
-"Calculate 3 * 4 and tell me the weather in New York"
-→ Parallel execution: Math Agent + Weather Agent
-
-"First calculate 3 × 4. Then tell me the weather in Cairo on day 12"
-→ Sequential execution: Math Agent → Weather Agent (with dependency)
-```
 
 ## Installation & Setup
 
@@ -555,6 +535,7 @@ This project also makes use of other open-source libraries (e.g., LangGraph, MCP
 - [MCP](https://github.com/modelcontextprotocol) – For providing the Model Context Protocol that inspired part of the system design.
 - [A2A](https://github.com/a2a-project) – For concepts and architecture patterns used in building orchestrators and agents.
 - [LangGraph](https://github.com/langchain-ai/langgraph) – For enabling composable agent workflows and structured orchestration.
+
 
 
 
