@@ -351,9 +351,9 @@ python a2a_server_manager.py
 
 This starts all agent servers simultaneously:
 
-- Orchestrator Agent: http://localhost:10003
-- Math Agent: http://localhost:10004
-- Weather Agent: http://localhost:10005
+- Orchestrator Agent: localhost:10003
+- Math Agent: localhost:10004
+- Weather Agent: localhost:10005
 
 ### Start Individual Agents (Alternative)
 
@@ -523,6 +523,7 @@ This project also makes use of other open-source libraries (e.g., LangGraph, MCP
 - [MCP](https://github.com/modelcontextprotocol) – For providing the Model Context Protocol that inspired part of the system design.
 - [A2A](https://github.com/a2a-project) – For concepts and architecture patterns used in building orchestrators and agents.
 - [LangGraph](https://github.com/langchain-ai/langgraph) – For enabling composable agent workflows and structured orchestration.
+
 
 
 
